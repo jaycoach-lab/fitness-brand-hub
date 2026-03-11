@@ -8,6 +8,16 @@ import PlaceholderScreen from "./PlaceholderScreen";
 
 type TabKey = "home" | "library" | "workshop" | "reviews";
 
+const courseReviewItems = [
+  { title: "정규과정 수강 후기", subtitle: "브랜드 방향이 훨씬 또렷해졌어요" },
+  { title: "실전 적용 후기", subtitle: "회원 커뮤니케이션 방식이 달라졌어요" },
+  { title: "운영 전환 후기", subtitle: "혼자서도 운영 흐름을 잡을 수 있었어요" },
+  { title: "수강 후기 4", subtitle: "실제 수강생 후기 요약 텍스트" },
+  { title: "수강 후기 5", subtitle: "실제 수강생 후기 요약 텍스트" },
+  { title: "수강 후기 6", subtitle: "실제 수강생 후기 요약 텍스트" },
+  { title: "수강 후기 7", subtitle: "실제 수강생 후기 요약 텍스트" },
+];
+
 export default function HomeScreen() {
   const [activeTab, setActiveTab] = useState<TabKey>("home");
 
@@ -171,6 +181,34 @@ export default function HomeScreen() {
                       height={1024}
                       className="h-auto w-full object-contain"
                     />
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-base font-semibold text-neutral-900">
+                    수강생 후기
+                  </h3>
+                </div>
+                <div className="mt-4">
+                  <h4 className="text-sm font-semibold text-neutral-900">
+                    정규과정 후기
+                  </h4>
+                  <div className="mt-3 -mx-4 overflow-x-auto px-4 sm:-mx-5 sm:px-5">
+                    <div className="flex gap-3 pb-1">
+                      {courseReviewItems.map((item) => (
+                        <div
+                          key={item.title}
+                          className="w-[7rem] shrink-0"
+                        >
+                          <div className="aspect-[9/16] w-full rounded-lg bg-neutral-200" />
+                          <p className="mt-2 line-clamp-2 text-xs leading-4 text-neutral-600">
+                            {item.subtitle}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </section>
