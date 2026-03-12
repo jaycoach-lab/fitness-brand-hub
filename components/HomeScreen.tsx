@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import TopBar from "./TopBar";
 import BottomTabBar from "./BottomTabBar";
+import LibraryScreen from "./LibraryScreen";
 import PlaceholderScreen from "./PlaceholderScreen";
 
 type TabKey = "home" | "library" | "workshop" | "reviews";
@@ -322,10 +323,7 @@ export default function HomeScreen() {
               </section>
             </div>
           ) : activeTab === "library" ? (
-          <PlaceholderScreen
-            title="자료실"
-            description="전자책과 자료들은 곧 이곳에서 볼 수 있어요."
-          />
+          <LibraryScreen />
         ) : activeTab === "workshop" ? (
           <PlaceholderScreen
             title="워크샵"
