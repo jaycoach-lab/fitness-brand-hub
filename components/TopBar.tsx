@@ -1,12 +1,9 @@
 export default function TopBar() {
   return (
-    <header className="flex items-center justify-between px-5 py-4">
+    <header className="sticky top-0 z-10 flex items-center justify-between bg-neutral-50 px-5 py-4">
       <div>
-        <p className="text-[11px] font-medium tracking-[0.14em] text-neutral-500">
-          FITNESS BRAND HUB
-        </p>
-        <h1 className="mt-1 text-base font-semibold text-neutral-900">
-          피트니스 1인 기업 허브
+        <h1 className="text-xl font-bold text-neutral-900" style={{ fontFamily: "'Paperlogy', sans-serif" }}>
+          피트니스 1인 기업
         </h1>
       </div>
     </header>
