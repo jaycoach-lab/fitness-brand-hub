@@ -5,6 +5,7 @@ import Image from "next/image";
 import TopBar from "./TopBar";
 import BottomTabBar from "./BottomTabBar";
 import LibraryScreen from "./LibraryScreen";
+import WorkshopScreen from "./WorkshopScreen";
 import PlaceholderScreen from "./PlaceholderScreen";
 
 type TabKey = "home" | "library" | "workshop" | "reviews";
@@ -325,10 +326,7 @@ export default function HomeScreen() {
           ) : activeTab === "library" ? (
           <LibraryScreen />
         ) : activeTab === "workshop" ? (
-          <PlaceholderScreen
-            title="워크샵"
-            description="진행 중인 워크샵 정보가 이 탭에 표시됩니다."
-          />
+          <WorkshopScreen />
         ) : (
           <PlaceholderScreen
             title="후기"
