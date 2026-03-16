@@ -177,25 +177,31 @@ export default function HomeScreen() {
                   </span>
                 </div>
                 <div className="relative mt-3 flex min-h-[12rem] flex-col overflow-hidden rounded-2xl bg-neutral-900 px-5 py-5 text-white sm:px-6 sm:py-6">
-                  <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 sm:right-5 sm:top-5">
-                    <svg className="h-5 w-5 text-neutral-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7h-10v10" />
-                    </svg>
+                  <div className="pointer-events-none absolute inset-0">
+                    <Image
+                      src="/slots/home-workshop-banner.png"
+                      alt=""
+                      fill
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/55" />
                   </div>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white shadow-[0_0_20px_rgba(220,38,38,0.55),0_0_8px_rgba(220,38,38,0.35)] animate-pulse">
-                      마감 임박!
-                    </span>
-                    <span className="text-xs text-white/90">잔여 3석</span>
-                  </div>
-                  <div className="flex-1 min-h-[1.5rem]" />
-                  <div className="pt-1 pb-0.5">
-                    <h4 className="text-2xl font-bold leading-snug sm:text-[1.5rem]">
-                      피트니스 1인 기업 워크샵
-                    </h4>
-                    <p className="mt-2 text-xs text-white/80">
-                      일시 : 2024.04.16 (일) | 부산 만덕구
-                    </p>
+                  <div className="relative z-10 flex h-full flex-col">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white shadow-[0_0_20px_rgba(220,38,38,0.55),0_0_8px_rgba(220,38,38,0.35)] animate-pulse">
+                        마감 임박!
+                      </span>
+                      <span className="text-xs text-white/90">잔여 3석</span>
+                    </div>
+                    <div className="flex-1 min-h-[1.5rem]" />
+                    <div className="pt-1 pb-0.5">
+                      <h4 className="text-2xl font-bold leading-snug sm:text-[1.5rem]">
+                        피트니스 1인 기업 워크샵
+                      </h4>
+                      <p className="mt-2 text-xs text-white/80">
+                        일시 : 2024.04.16 (일) | 부산 만덕구
+                      </p>
+                    </div>
                   </div>
                 </div>
               </section>
