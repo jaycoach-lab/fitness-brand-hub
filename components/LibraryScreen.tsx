@@ -49,29 +49,36 @@ export default function LibraryScreen() {
       </p>
 
       <div className="mt-4 space-y-3">
-        <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
-          <div className="flex items-center justify-between">
-            <span className="badge-gloss badge-shine-amber inline-flex rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-medium text-amber-800">
-              인기
-            </span>
-          </div>
-          <div className="relative mt-3 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
-            <img
-              src="/library-ebook-story.png"
-              alt="피트니스 1인 기업 이야기"
-              className="h-full w-full object-cover object-center"
-            />
-          </div>
-          <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-neutral-500">
-            전자책
-          </p>
-          <h3 className="mt-1 text-base font-semibold text-neutral-900">
-            피트니스 1인 기업 이야기
-          </h3>
-          <p className="mt-1 text-sm leading-5 text-neutral-500">
-            트레이너, 필라테스 강사 800명 이상 읽었습니다
-          </p>
-        </article>
+        <a
+          href="https://www.geekus.kr/fitnessbusinessschool/classroom/185"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
+            <div className="flex items-center justify-between">
+              <span className="badge-gloss badge-shine-amber inline-flex rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-medium text-amber-800">
+                인기
+              </span>
+            </div>
+            <div className="relative mt-3 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+              <img
+                src="/library-ebook-story.png"
+                alt="피트니스 1인 기업 이야기"
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
+            <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-neutral-500">
+              전자책
+            </p>
+            <h3 className="mt-1 text-base font-semibold text-neutral-900">
+              피트니스 1인 기업 이야기
+            </h3>
+            <p className="mt-1 text-sm leading-5 text-neutral-500">
+              트레이너, 필라테스 강사 800명 이상 읽었습니다
+            </p>
+          </article>
+        </a>
 
         <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
           <div className="flex items-center justify-between">

@@ -53,8 +53,17 @@ export default function HomeScreen() {
                   }
                 }
               `}</style>
-              <section className="min-h-[10.5rem] overflow-hidden rounded-[1.25rem] border border-neutral-200 bg-neutral-900 px-5 py-6 text-white sm:px-6 sm:py-6">
-                <div className="max-w-[11.5rem] text-left sm:max-w-[11.75rem]">
+              <section className="relative min-h-[10.5rem] overflow-hidden rounded-[1.25rem] border border-neutral-200 bg-neutral-900 px-5 py-6 text-white sm:px-6 sm:py-6">
+                <div className="pointer-events-none absolute inset-0">
+                  <Image
+                    src="/slots/home-hero-visual.png"
+                    alt=""
+                    fill
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/55" />
+                </div>
+                <div className="relative z-10 max-w-[11.5rem] text-left sm:max-w-[11.75rem]">
                   <p className="text-[11px] font-medium tracking-[0.14em] text-white/70 sm:text-xs">
                     피트니스 1인 기업
                   </p>
@@ -91,10 +100,14 @@ export default function HomeScreen() {
                     onClick={() => setActiveTab("library")}
                     className="flex w-full flex-col items-center rounded-xl px-2 py-3 active:bg-neutral-100"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[10px] font-semibold tracking-[0.08em] text-neutral-600 shadow-sm">
-                      LIB
+                    <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center">
+                      <img
+                        src="/home-quickmenu-ebook.png"
+                        alt=""
+                        className="h-20 w-20 object-contain"
+                      />
                     </div>
-                    <p className="mt-2.5 w-full text-center text-[11px] leading-4 font-semibold text-neutral-900 sm:text-[11px]">
+                    <p className="mt-2.5 w-full min-w-0 text-center text-[11px] leading-4 font-semibold text-neutral-900 sm:text-[11px]">
                       무료 전자책
                     </p>
                   </button>
@@ -103,10 +116,14 @@ export default function HomeScreen() {
                     onClick={() => setActiveTab("workshop")}
                     className="flex w-full flex-col items-center rounded-xl px-2 py-3 active:bg-neutral-100"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[10px] font-semibold tracking-[0.08em] text-neutral-600 shadow-sm">
-                      WKS
+                    <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center">
+                      <img
+                        src="/home-quickmenu-workshop.png"
+                        alt=""
+                        className="h-20 w-20 object-contain"
+                      />
                     </div>
-                    <p className="mt-2.5 w-full text-center text-[11px] leading-4 font-semibold text-neutral-900 sm:text-[11px]">
+                    <p className="mt-2.5 w-full min-w-0 text-center text-[11px] leading-4 font-semibold text-neutral-900 sm:text-[11px]">
                       진행중인 워크샵
                     </p>
                   </button>
@@ -115,11 +132,15 @@ export default function HomeScreen() {
                     onClick={() => setActiveTab("reviews")}
                     className="flex w-full flex-col items-center rounded-xl px-2 py-3 active:bg-neutral-100"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[10px] font-semibold tracking-[0.08em] text-neutral-600 shadow-sm">
-                      AI
+                    <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center">
+                      <img
+                        src="/home-quickmenu-ai.png"
+                        alt=""
+                        className="h-20 w-20 object-contain [filter:drop-shadow(0_0_14px_rgba(15,23,42,0.52))]"
+                      />
                     </div>
-                    <p className="mt-2.5 w-full text-center text-[11px] leading-4 font-semibold text-neutral-900 sm:text-[11px]">
-                      🚀 Content Boost AI
+                    <p className="mt-2.5 w-full min-w-0 overflow-hidden text-ellipsis whitespace-nowrap text-center text-[11px] leading-4 font-semibold text-neutral-900 sm:text-[11px]">
+                      🚀 Content AI
                     </p>
                   </button>
                 </div>
@@ -277,12 +298,7 @@ export default function HomeScreen() {
               </section>
 
               <section>
-                <div className="flex items-center justify-between gap-3">
-                  <h3 className="text-base font-semibold text-neutral-900">
-                    수강생 후기
-                  </h3>
-                </div>
-                <div className="mt-4">
+                <div>
                   <h4 className="text-sm font-semibold text-neutral-900">
                     정규과정 후기
                   </h4>
