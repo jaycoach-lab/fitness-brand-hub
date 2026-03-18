@@ -12,6 +12,8 @@ import HomeContentAICallout from "./home/HomeContentAICallout";
 import HomeWorkshopReviewsMarquee from "./home/HomeWorkshopReviewsMarquee";
 import HomeQuickMenu from "./home/HomeQuickMenu";
 import HomeHeroSection from "./home/HomeHeroSection";
+import HomeLatestWorkshopCard from "./home/HomeLatestWorkshopCard";
+import HomeEbookPromos from "./home/HomeEbookPromos";
 
 type TabKey = "home" | "library" | "workshop" | "reviews";
 
@@ -46,109 +48,11 @@ export default function HomeScreen() {
 
               <HomeMemberBanner />
 
-              <section>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base font-semibold text-neutral-900">
-                    최신 워크샵
-                  </h3>
-                  <span className="text-xs font-medium text-neutral-500">
-                    전체보기 &gt;
-                  </span>
-                </div>
-                <div className="relative mt-3 flex min-h-[12rem] flex-col overflow-hidden rounded-2xl bg-neutral-900 px-5 py-5 text-white sm:px-6 sm:py-6">
-                  <div className="pointer-events-none absolute inset-0">
-                    <Image
-                      src="/slots/home-workshop-banner.png"
-                      alt=""
-                      fill
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute inset-0 z-10 flex h-full flex-col justify-between">
-                    <div className="-mt-1 flex flex-wrap items-center gap-2 px-5 py-5 sm:px-6 sm:py-6">
-                      <span className="inline-flex items-center rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white shadow-[0_0_20px_rgba(220,38,38,0.55),0_0_8px_rgba(220,38,38,0.35)] animate-pulse">
-                        마감 임박!
-                      </span>
-                      <span className="text-xs font-semibold text-red-500">
-                        잔여 3석
-                      </span>
-                    </div>
-                    <div className="mt-auto px-5 pb-3 pt-2 sm:px-6">
-                      <h4 className="text-[1.7rem] font-bold leading-snug sm:text-[1.8rem]">
-                        피트니스 1인 기업 워크샵
-                      </h4>
-                      <p className="mt-0.5 pl-0.5 text-xs text-white/80">
-                        일시 : 2024.04.16 (일) | 부산 만덕구
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              <HomeLatestWorkshopCard />
 
               <HomeWorkshopReviewsMarquee />
 
-              <section className="rounded-3xl border border-neutral-200 bg-white px-5 pt-5 pb-0">
-                <div className="flex flex-col">
-                  <div className="space-y-3 text-center">
-                    <h3 className="text-xl font-bold leading-7 text-neutral-900">
-                      <span className="block">피트니스 전문가를 위한</span>
-                      <span className="block">1인 기업 올인원 가이드</span>
-                    </h3>
-                    <p className="text-sm leading-6 text-neutral-500">
-                      1인 기업가로 성장하는 실전 전략
-                    </p>
-                  </div>
-                  <div className="mt-5 flex justify-center">
-                    <button
-                      type="button"
-                      onClick={() => setActiveTab("library")}
-                      className="inline-flex min-h-11 items-center justify-center rounded-full bg-neutral-900 px-5 text-sm font-semibold text-white"
-                    >
-                      무료로 읽기
-                    </button>
-                  </div>
-                  <div className="relative mt-6 w-full overflow-hidden rounded-2xl">
-                    <Image
-                      src="/ebook-cover-v2.png"
-                      alt="피트니스 1인 기업 올인원 가이드"
-                      width={819}
-                      height={1024}
-                      className="h-auto w-full object-contain"
-                    />
-                  </div>
-                </div>
-              </section>
-
-              <section className="rounded-3xl border border-neutral-900 bg-black px-5 pt-5 pb-0">
-                <div className="flex flex-col">
-                  <div className="space-y-3 text-center">
-                    <h3 className="text-xl font-bold leading-7 text-white">
-                      월급쟁이 트레이너로 살아남기
-                    </h3>
-                    <p className="text-sm leading-6 text-white/80">
-                      막연한 불안에서 완전한 독립으로
-                    </p>
-                  </div>
-                  <div className="mt-5 flex justify-center">
-                    <button
-                      type="button"
-                      onClick={() => setActiveTab("library")}
-                      className="inline-flex min-h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-neutral-900"
-                    >
-                      무료로 읽기
-                    </button>
-                  </div>
-                  <div className="relative mt-6 w-full overflow-hidden rounded-2xl">
-                    <Image
-                      src="/ebook-salaryman-v2.png"
-                      alt="월급쟁이 트레이너로 살아남기"
-                      width={819}
-                      height={1024}
-                      className="h-auto w-full object-contain"
-                    />
-                  </div>
-                </div>
-              </section>
+              <HomeEbookPromos onGoLibrary={() => setActiveTab("library")} />
 
               <section>
                 <div>
