@@ -2,15 +2,32 @@
 
 import Image from "next/image";
 
-export default function HomeLatestWorkshopCard() {
+type HomeLatestWorkshopCardProps = {
+  onGoWorkshop: () => void;
+};
+
+export default function HomeLatestWorkshopCard({
+  onGoWorkshop,
+}: HomeLatestWorkshopCardProps) {
   return (
     <section>
       <div className="flex items-center justify-between">
         <h3 className="text-base font-semibold text-neutral-900">최신 워크샵</h3>
-        <span className="text-xs font-medium text-neutral-500">전체보기 &gt;</span>
+        <button
+          type="button"
+          onClick={onGoWorkshop}
+          className="text-xs font-medium text-neutral-500"
+        >
+          전체보기 &gt;
+        </button>
       </div>
 
-      <div className="relative mt-3 flex min-h-[12rem] flex-col overflow-hidden rounded-2xl bg-neutral-900 px-5 py-5 text-white sm:px-6 sm:py-6">
+      <a
+        href="https://www.latpeed.com/products/OGMv4"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative mt-3 flex min-h-[12rem] flex-col overflow-hidden rounded-2xl bg-neutral-900 px-5 py-5 text-white sm:px-6 sm:py-6"
+      >
         <div className="pointer-events-none absolute inset-0">
           <Image
             src="/slots/home-workshop-banner.png"
@@ -37,7 +54,7 @@ export default function HomeLatestWorkshopCard() {
             </p>
           </div>
         </div>
-      </div>
+      </a>
     </section>
   );
 }

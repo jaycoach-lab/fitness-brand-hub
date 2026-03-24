@@ -1,12 +1,11 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import TopBar from "./TopBar";
 import BottomTabBar from "./BottomTabBar";
 import LibraryScreen from "./LibraryScreen";
 import WorkshopScreen from "./WorkshopScreen";
-import PlaceholderScreen from "./PlaceholderScreen";
 import HomeMemberBanner from "./home/HomeMemberBanner";
 import HomeContentAICallout from "./home/HomeContentAICallout";
 import HomeWorkshopReviewsMarquee from "./home/HomeWorkshopReviewsMarquee";
@@ -14,6 +13,7 @@ import HomeQuickMenu from "./home/HomeQuickMenu";
 import HomeHeroSection from "./home/HomeHeroSection";
 import HomeLatestWorkshopCard from "./home/HomeLatestWorkshopCard";
 import HomeEbookPromos from "./home/HomeEbookPromos";
+import ReviewsScreen from "./ReviewsScreen";
 import HomeCourseReviews from "./home/HomeCourseReviews";
 
 type TabKey = "home" | "library" | "workshop" | "reviews";
@@ -30,13 +30,23 @@ const courseReviewItems = [
 
 export default function HomeScreen() {
   const [activeTab, setActiveTab] = useState<TabKey>("home");
+  const mainScrollRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (mainScrollRef.current) {
+      mainScrollRef.current.scrollTop = 0;
+    }
+  }, [activeTab]);
 
   return (
     <div className="bg-neutral-50">
       <div className="mx-auto flex h-[100dvh] w-full max-w-md flex-col overflow-hidden">
         <TopBar />
 
-        <main className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pb-6 pt-2 sm:px-5 sm:pb-5 sm:pt-0">
+        <main
+          ref={mainScrollRef}
+          className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pb-6 pt-2 sm:px-5 sm:pb-5 sm:pt-0"
+        >
           {activeTab === "home" ? (
             <div className="flex flex-col space-y-[1.25rem]">
               <HomeHeroSection onGoLibrary={() => setActiveTab("library")} />
@@ -49,7 +59,7 @@ export default function HomeScreen() {
 
               <HomeMemberBanner />
 
-              <HomeLatestWorkshopCard />
+              <HomeLatestWorkshopCard onGoWorkshop={() => setActiveTab("workshop")} />
 
               <HomeWorkshopReviewsMarquee />
 
@@ -67,10 +77,7 @@ export default function HomeScreen() {
         ) : activeTab === "workshop" ? (
           <WorkshopScreen />
         ) : (
-          <PlaceholderScreen
-            title="후기"
-            description="정규 과정과 워크샵 후기가 이 탭에 모입니다."
-          />
+          <ReviewsScreen items={courseReviewItems} />
         )}
         </main>
 

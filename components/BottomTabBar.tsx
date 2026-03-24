@@ -12,6 +12,8 @@ const tabs: { key: TabKey; label: string }[] = [
   { key: "reviews", label: "후기" },
 ];
 
+const visibleTabs = tabs.filter((tab) => tab.key !== "reviews");
+
 export default function BottomTabBar({
   activeTab,
   onSelectTab,
@@ -19,7 +21,7 @@ export default function BottomTabBar({
   return (
     <nav className="sticky inset-x-0 bottom-0 border-t border-neutral-200 bg-white/95 px-4 py-2 backdrop-blur">
       <div className="mx-auto flex max-w-md items-center justify-between gap-2">
-        {tabs.map((tab) => {
+        {visibleTabs.map((tab) => {
           const isActive = tab.key === activeTab;
           return (
             <button

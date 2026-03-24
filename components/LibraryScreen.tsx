@@ -80,29 +80,36 @@ export default function LibraryScreen() {
           </article>
         </a>
 
-        <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
-          <div className="flex items-center justify-between">
-            <span className="badge-gloss badge-shine-emerald inline-flex rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-medium text-emerald-800">
-              New!
-            </span>
-          </div>
-          <div className="relative mt-3 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
-            <img
-              src="/library-salaryman.png"
-              alt="월급쟁이 트레이너로 살아남기"
-              className="h-full w-full object-cover object-center"
-            />
-          </div>
-          <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-neutral-500">
-            전자책
-          </p>
-          <h3 className="mt-1 text-base font-semibold text-neutral-900">
-            월급쟁이 트레이너로 살아남기
-          </h3>
-          <p className="mt-1 text-sm leading-5 text-neutral-500">
-            막연한 불안에서 완전한 독립으로
-          </p>
-        </article>
+        <a
+          href="https://foregoing-yarrow-da9.notion.site/2d70b10a814b806bbb94f96bd88b3df2?source=copy_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
+            <div className="flex items-center justify-between">
+              <span className="badge-gloss badge-shine-emerald inline-flex rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-medium text-emerald-800">
+                New!
+              </span>
+            </div>
+            <div className="relative mt-3 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+              <img
+                src="/library-salaryman.png"
+                alt="월급쟁이 트레이너로 살아남기"
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
+            <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-neutral-500">
+              전자책
+            </p>
+            <h3 className="mt-1 text-base font-semibold text-neutral-900">
+              월급쟁이 트레이너로 살아남기
+            </h3>
+            <p className="mt-1 text-sm leading-5 text-neutral-500">
+              막연한 불안에서 완전한 독립으로
+            </p>
+          </article>
+        </a>
       </div>
     </div>
   );
