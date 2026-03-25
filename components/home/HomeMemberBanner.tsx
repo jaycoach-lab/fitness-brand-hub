@@ -9,7 +9,7 @@ export default function HomeMemberBanner() {
             피트니스 1인 기업 멤버가 되어보세요.
           </p>
           <p className="mt-1 text-xs leading-5 text-neutral-500">
-            741명의 피트니스 전문가가 함께 합니다.
+            819명의 피트니스 전문가가 함께 합니다.
           </p>
         </div>
         <a

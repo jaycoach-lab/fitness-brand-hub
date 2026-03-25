@@ -41,7 +41,7 @@ export default function WorkshopScreen() {
                     100,000원
                   </span>
                   <span className="text-base font-semibold text-neutral-900">
-                    0원
+                    30,000원
                   </span>
                 </div>
                 <span className="rounded-full bg-neutral-900 px-4 py-2 text-sm font-medium text-white">
@@ -52,12 +52,7 @@ export default function WorkshopScreen() {
           </article>
         </a>
 
-        <a
-          href="https://www.latpeed.com/products/OGMv4"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
+        <div className="block cursor-default">
           <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
             <div className="relative aspect-[16/9] w-full bg-neutral-200">
               <Image
@@ -87,13 +82,13 @@ export default function WorkshopScreen() {
                     50,000원
                   </span>
                 </div>
-                <span className="rounded-full bg-neutral-900 px-4 py-2 text-sm font-medium text-white">
-                  신청하기
+                <span className="rounded-full bg-neutral-200 px-4 py-2 text-sm font-medium text-neutral-800">
+                  준비중
                 </span>
               </div>
             </div>
           </article>
-        </a>
+        </div>
       </div>
     </div>
   );

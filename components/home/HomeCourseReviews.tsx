@@ -57,9 +57,6 @@ export default function HomeCourseReviews({ items }: HomeCourseReviewsProps) {
                   className="block w-[7rem] shrink-0"
                 >
                   {thumbnail}
-                  <p className="mt-2 line-clamp-2 text-xs leading-4 text-neutral-600">
-                    {item.subtitle}
-                  </p>
                 </a>
               );
             }
@@ -67,9 +64,6 @@ export default function HomeCourseReviews({ items }: HomeCourseReviewsProps) {
             return (
               <div key={item.title} className="w-[7rem] shrink-0">
                 {thumbnail}
-                <p className="mt-2 line-clamp-2 text-xs leading-4 text-neutral-600">
-                  {item.subtitle}
-                </p>
               </div>
             );
           })}

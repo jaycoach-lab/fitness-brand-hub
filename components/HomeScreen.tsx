@@ -57,11 +57,11 @@ export default function HomeScreen() {
                 onGoReviews={() => setActiveTab("reviews")}
               />
 
-              <HomeMemberBanner />
-
               <HomeLatestWorkshopCard onGoWorkshop={() => setActiveTab("workshop")} />
 
               <HomeWorkshopReviewsMarquee />
+
+              <HomeMemberBanner />
 
               <HomeEbookPromos onGoLibrary={() => setActiveTab("library")} />
 

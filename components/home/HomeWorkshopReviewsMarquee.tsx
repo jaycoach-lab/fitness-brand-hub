@@ -21,6 +21,22 @@ const workshopReviewItems = [
     body: "1인 기업으로 전환하는 데 필요한 실전 노하우를 많이 배웠어요.",
     author: "트레이너 정OO",
   },
+  {
+    body: "지금 번아웃으로 힘든 상황인데, 한줄기 빛과 같은 강의였습니다.",
+    author: "8년차 트레이너 김OO",
+  },
+  {
+    body: "제이코치님의 워크샵 이후 절망감이 가득했던 머릿속이 희망으로 가득차기 시작했습니다.",
+    author: "5년차 필라테스 강사 최OO",
+  },
+  {
+    body: "3시간 45분동안 진행되는 강의 중 한번도 힘들거나 지친 기색 없이 진실하게 본인의 해결과 시야를 많이 보여주셔서 감사했습니다.",
+    author: "3년차 트레이너 송OO",
+  },
+  {
+    body: "센터내에 있다보니 수업에 매몰되었는데 이번 워크샵으로 앞으로 가야할 방향들이 많이 해결됬습니다.",
+    author: "센터 대표 강OO",
+  },
 ];
 
 export default function HomeWorkshopReviewsMarquee() {
@@ -32,7 +48,7 @@ export default function HomeWorkshopReviewsMarquee() {
           to { transform: translateX(-50%); }
         }
         .workshop-review-flow {
-          animation: workshopReviewFlow 20s linear infinite;
+          animation: workshopReviewFlow 2.5s linear infinite alternate;
         }
         @media (prefers-reduced-motion: reduce) {
           .workshop-review-flow {
