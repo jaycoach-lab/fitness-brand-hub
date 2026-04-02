@@ -3,10 +3,10 @@
 import Image from "next/image";
 
 type HomeHeroSectionProps = {
-  onGoLibrary: () => void;
+  onOpenIntro: () => void;
 };
 
-export default function HomeHeroSection({ onGoLibrary }: HomeHeroSectionProps) {
+export default function HomeHeroSection({ onOpenIntro }: HomeHeroSectionProps) {
   return (
     <section className="relative min-h-[10.5rem] overflow-hidden rounded-[1.25rem] border border-neutral-200 bg-neutral-900 px-5 py-6 text-white sm:px-6 sm:py-6">
       <div className="pointer-events-none absolute inset-0">
@@ -37,7 +37,7 @@ export default function HomeHeroSection({ onGoLibrary }: HomeHeroSectionProps) {
         <div className="mt-5">
           <button
             type="button"
-            onClick={onGoLibrary}
+            onClick={onOpenIntro}
             className="inline-flex min-h-10 items-center justify-center rounded-full bg-white px-4.5 text-[13px] font-semibold text-neutral-900 sm:min-h-11 sm:px-5 sm:text-sm"
           >
             더 알아보기
