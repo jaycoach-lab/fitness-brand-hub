@@ -13,7 +13,8 @@ export default function WorkshopScreen() {
           href="https://www.latpeed.com/products/OGMv4"
           target="_blank"
           rel="noopener noreferrer"
-          className="block"
+          className="hidden"
+          aria-hidden
         >
           <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
             <div className="relative aspect-[16/9] w-full bg-neutral-200">
@@ -52,22 +53,27 @@ export default function WorkshopScreen() {
           </article>
         </a>
 
-        <div className="block cursor-default">
+        <a
+          href="https://www.latpeed.com/products/ewBrO"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
           <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
             <div className="relative aspect-[16/9] w-full bg-neutral-200">
               <Image
-                src="/slots/home-workshop-banner.png"
+                src="/slots/workshop-main.png"
                 alt=""
                 fill
                 className="h-full w-full object-cover"
               />
               <span className="absolute right-2 top-2 inline-flex items-center rounded-md bg-amber-500 px-2.5 py-1.5 text-[11px] font-semibold text-white shadow-[0_0_20px_rgba(245,158,11,0.55),0_0_8px_rgba(245,158,11,0.35)] animate-pulse">
-                곧 오픈
+                모집중
               </span>
             </div>
             <div className="p-4">
               <h3 className="text-base font-semibold text-neutral-900">
-                [제이코치 X 카일] 당신의 가격은 틀렸습니다.
+                피트니스 전문가를 위한 프라이싱과 세일즈설계
               </h3>
               <ul className="mt-2 space-y-1 text-sm text-neutral-500">
                 <li>2026.04.26</li>
@@ -79,16 +85,16 @@ export default function WorkshopScreen() {
                     150,000원
                   </span>
                   <span className="text-base font-semibold text-neutral-900">
-                    50,000원
+                    49,500원
                   </span>
                 </div>
-                <span className="rounded-full bg-neutral-200 px-4 py-2 text-sm font-medium text-neutral-800">
-                  준비중
+                <span className="rounded-full bg-neutral-900 px-4 py-2 text-sm font-medium text-white">
+                  신청하기
                 </span>
               </div>
             </div>
           </article>
-        </div>
+        </a>
       </div>
     </div>
   );

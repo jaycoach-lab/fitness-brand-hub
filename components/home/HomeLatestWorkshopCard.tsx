@@ -23,7 +23,7 @@ export default function HomeLatestWorkshopCard({
       </div>
 
       <a
-        href="https://www.latpeed.com/products/OGMv4"
+        href="https://www.latpeed.com/products/ewBrO"
         target="_blank"
         rel="noopener noreferrer"
         className="relative mt-3 flex min-h-[12rem] flex-col overflow-hidden rounded-2xl bg-neutral-900 px-5 py-5 text-white sm:px-6 sm:py-6"
@@ -38,19 +38,21 @@ export default function HomeLatestWorkshopCard({
         </div>
 
         <div className="absolute inset-0 z-10 flex h-full flex-col justify-between">
-          <div className="-mt-1 flex flex-wrap items-center gap-2 px-5 py-5 sm:px-6 sm:py-6">
-            <span className="inline-flex items-center rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white shadow-[0_0_20px_rgba(220,38,38,0.55),0_0_8px_rgba(220,38,38,0.35)] animate-pulse">
-              마감 임박!
+          <div className="-mt-1 flex flex-wrap items-center gap-2 px-5 py-5 text-xs sm:px-6 sm:py-6">
+            <span className="inline-flex items-center rounded-md bg-red-600 px-3 py-1.5 font-semibold text-white shadow-[0_0_20px_rgba(220,38,38,0.55),0_0_8px_rgba(220,38,38,0.35)] animate-pulse">
+              신규 모집!
             </span>
-            <span className="text-xs font-semibold text-red-500">잔여 3석</span>
+            <span className="font-semibold text-red-500">잔여 2석</span>
           </div>
 
           <div className="mt-auto px-5 pb-3 pt-2 sm:px-6">
-            <h4 className="text-[1.7rem] font-bold leading-snug sm:text-[1.8rem]">
-              피트니스 1인 기업 워크샵
+            <h4 className="text-[1.56rem] font-bold leading-snug sm:text-[1.68rem]">
+              피트니스 전문가를 위한
+              <br />
+              프라이싱과 세일즈설계
             </h4>
-            <p className="mt-0.5 pl-0.5 text-xs text-white/80">
-              일시 : 2024.04.16 (일) | 부산 만덕구
+            <p className="mt-1 pl-0.5 text-xs text-white/80">
+              일시 : 2026.04.29 (일) | 서울 구로구 근처
             </p>
           </div>
         </div>
