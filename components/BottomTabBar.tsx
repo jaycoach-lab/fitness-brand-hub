@@ -50,7 +50,6 @@ const tabs: { key: TabKey; label: string; icon: ReactNode }[] = [
   { key: "library",  label: "자료실",   icon: <IconBook /> },
   { key: "workshop", label: "워크샵",   icon: <IconUsers /> },
   { key: "vod",      label: "VOD 강의", icon: <IconPlay /> },
-  { key: "reviews",  label: "후기",     icon: <IconUsers /> },
 ];
 
 export default function BottomTabBar({
