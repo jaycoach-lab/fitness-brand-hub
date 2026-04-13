@@ -1,3 +1,5 @@
+'use client';
+
 export default function LibraryScreen() {
   return (
     <div className="flex h-full flex-col px-4 py-5 text-left">

@@ -14,8 +14,9 @@ import HomeLatestWorkshopCard from "./home/HomeLatestWorkshopCard";
 import HomeEbookPromos from "./home/HomeEbookPromos";
 import ReviewsScreen from "./ReviewsScreen";
 import HomeCourseReviews from "./home/HomeCourseReviews";
+import VodScreen from "./VodScreen";
 
-type TabKey = "home" | "library" | "workshop" | "reviews";
+type TabKey = "home" | "library" | "workshop" | "vod" | "reviews";
 
 const courseReviewItems = [
   { title: "정규과정 수강 후기", subtitle: "브랜드 방향이 훨씬 또렷해졌어요" },
@@ -139,6 +140,8 @@ export default function HomeScreen() {
           <LibraryScreen />
         ) : activeTab === "workshop" ? (
           <WorkshopScreen />
+        ) : activeTab === "vod" ? (
+          <VodScreen />
         ) : (
           <ReviewsScreen items={courseReviewItems} />
         )}
