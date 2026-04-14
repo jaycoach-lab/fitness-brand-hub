@@ -56,13 +56,13 @@ export default function HomeQuickMenu({
         >
           <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center">
             <img
-              src="/home-quickmenu-ai.png"
+              src="/home-quickmenu-vod.png"
               alt=""
-              className="h-20 w-20 object-contain [filter:drop-shadow(0_0_14px_rgba(15,23,42,0.52))]"
+              className="h-20 w-20 object-contain"
             />
           </div>
           <p className="mt-2.5 w-full min-w-0 overflow-hidden text-ellipsis whitespace-nowrap text-center text-[11px] leading-4 font-semibold text-neutral-900 sm:text-[11px]">
-            🚀 Content AI
+            VOD 강의
           </p>
         </button>
       </div>

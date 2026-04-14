@@ -117,14 +117,14 @@ export default function HomeScreen() {
               <HomeQuickMenu
                 onGoLibrary={() => setActiveTab("library")}
                 onGoWorkshop={() => setActiveTab("workshop")}
-                onGoReviews={scrollToContentAi}
+                onGoReviews={() => setActiveTab("vod")}
               />
+
+              <HomeMemberBanner />
 
               <HomeLatestWorkshopCard onGoWorkshop={() => setActiveTab("workshop")} />
 
               <HomeWorkshopReviewsMarquee />
-
-              <HomeMemberBanner />
 
               <HomeEbookPromos onGoLibrary={() => setActiveTab("library")} />
 

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#eeefff",
+                    "outline": "#737686",
+                    "surface-container": "#eceef0",
+                    "primary-fixed": "#dbe1ff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#434655",
+                    "inverse-primary": "#b4c5ff",
+                    "on-secondary-fixed-variant": "#31447b",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-bright": "#f7f9fb",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "on-background": "#191c1e",
+                    "surface": "#f7f9fb",
+                    "outline-variant": "#c3c6d7",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#00174b",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary-fixed": "#ffdbcd",
+                    "primary-container": "#2563eb",
+                    "tertiary-container": "#bc4800",
+                    "surface-tint": "#0053db",
+                    "background": "#f7f9fb",
+                    "secondary": "#495c95",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary": "#004ac6",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-container": "#ffede6",
+                    "secondary-container": "#acbfff",
+                    "on-secondary-container": "#394c84",
+                    "tertiary": "#943700",
+                    "on-surface": "#191c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "pretendard": ["Pretendard", "sans-serif"],
+                    "headline": ["Pretendard", "sans-serif"],
+                    "body": ["Pretendard", "sans-serif"],
+                    "label": ["Pretendard", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #1849e5 0%, #2E5BFF 100%);
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+        .clear-image {
+            filter: none !important;
+            backdrop-filter: none !important;
+        }
+    </style>
+<style>
+    @keyframes neon-pulse-red {
+      0%, 100% { box-shadow: 0 0 4px #FF3131, 0 0 10px #FF3131; }
+      50% { box-shadow: 0 0 8px #FF3131, 0 0 20px #FF3131; }
+    }
+    @keyframes neon-pulse-green {
+      0%, 100% { box-shadow: 0 0 4px #39FF14, 0 0 10px #39FF14; }
+      50% { box-shadow: 0 0 8px #39FF14, 0 0 20px #39FF14; }
+    }
+    .animate-neon-pulse-red {
+      animation: neon-pulse-red 2s infinite ease-in-out;
+    }
+    .animate-neon-pulse-green {
+      animation: neon-pulse-green 2s infinite ease-in-out;
+    }
+    </style>
+</head>
+<body class="bg-surface font-pretendard text-on-surface-variant antialiased">
+<main class="relative">
+<!-- Hero Image Container -->
+<section class="relative w-full overflow-hidden bg-black">
+<img alt="Professional business coach" class="w-full h-auto object-cover block clear-image" src="https://lh3.googleusercontent.com/aida/ADBb0ugBue-9Zr4VnIBYBKPokfDGgdVFV8JyuVyAgDps0DrLcPRcKOhE4IxqgWs6BpZk0GB4QlthvXd9RO24sVQmg6ZVDPeA4NISFAqUQ-YFbrhx4skh91GlUEB1aQIYMOPmCQUX-ck719GTpufnbLCLpXrUpSDhbCo1SyfG3Edg5Oe3SxPmDsNBKANKJAVrRwQmxYFUApbybqY055wv5SjKm_RiWkX3EVXpmBNlGJIx_MjSQrP6uDyY6YpBgtyHHxxU7C__vFdFBEnepA"/>
+</section>
+<!-- Content Canvas with Overlapping Tab -->
+<div class="relative z-10">
+<!-- Full-width White Card/Tab overlapping the image slightly lower -->
+<div class="bg-surface pt-12 rounded-t-[3rem] text-center w-full px-6 -mt-16 pb-4">
+<div class="mb-8">
+<p class="text-on-surface font-bold text-2xl leading-relaxed tracking-tight font-pretendard">
+                    제이코치의 1인 기업 커리큘럼을<br/>직접 경험해 보세요!
+                </p>
+</div>
+<!-- Divider -->
+<div class="w-12 h-1 bg-[#1849e5]/20 rounded-full mx-auto mb-6"></div>
+<!-- Course Card -->
+<div class="bg-surface-container-lowest rounded-3xl shadow-[0_12px_32px_rgba(43,42,81,0.06)] border border-[#aba9d7]/15 text-left max-w-lg mx-auto p-5">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFF1F1] text-[#FF3131] text-xs font-bold font-pretendard uppercase tracking-wider animate-neon-pulse-red">
+                                Premium VOD
+                            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-[#F0FFF0] text-[#39FF14] text-xs font-bold font-pretendard tracking-wider animate-neon-pulse-green">
+                                제이코치 추천!
+                            </span>
+</div>
+<div class="flex items-center gap-1 text-[#1849e5]">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="text-xs font-bold font-pretendard">4.9</span>
+</div>
+</div>
+<div>
+<h2 class="text-on-surface font-extrabold text-xl leading-snug mb-2 font-pretendard">
+<div class="text-sm font-bold text-[#1849e5] mb-1">[피트니스 전문가 전용]</div>
+                            실패하지 않는 가격 상승 기술 10가지
+                        </h2>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant/80 font-pretendard">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>7시간 10분</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">person</span>
+<span>제이코치</span>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="flex flex-col gap-1 gap-4 mb-2">
+<span class="text-sm text-on-surface-variant/60 line-through font-pretendard">790,000</span>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-extrabold text-[#E53935] font-pretendard">55%</span>
+<span class="text-2xl font-extrabold text-on-surface font-pretendard">355,500</span>
+<span class="text-base font-bold text-on-surface font-pretendard">원</span>
+</div>
+</div>
+<button class="cta-gradient text-white font-bold py-4 px-8 rounded-full w-full flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-200 shadow-lg shadow-[#1849e5]/20 font-pretendard">
+<span>수강하기</span>
+<span class="material-symbols-outlined text-lg">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
