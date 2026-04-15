@@ -30,12 +30,43 @@ export default function VodScreen() {
         }
         .neon-red-badge   { animation: neon-pulse-red   2s ease-in-out infinite; }
         .neon-green-badge { animation: neon-pulse-green 2s ease-in-out infinite; }
+        @keyframes neon-scroll-hint {
+          0%, 100% {
+            opacity: 0.85;
+            text-shadow:
+              0 0 4px rgba(223,255,0,0.45),
+              0 0 10px rgba(223,255,0,0.25);
+          }
+          50% {
+            opacity: 1;
+            text-shadow:
+              0 0 6px rgba(223,255,0,0.85),
+              0 0 16px rgba(223,255,0,0.55),
+              0 0 26px rgba(24,73,229,0.25);
+          }
+        }
+        .neon-scroll-hint { animation: neon-scroll-hint 2.4s ease-in-out infinite; color: #2b2a51; }
+        @keyframes vod-sheet-enter {
+          0%   { transform: translateY(20px); opacity: 0.9; }
+          5%   { transform: translateY(-8px); opacity: 1; }
+          9%   { transform: translateY(3px); }
+          12%  { transform: translateY(0); }
+          42%  { transform: translateY(20px); }
+          47%  { transform: translateY(-8px); }
+          51%  { transform: translateY(3px); }
+          54%  { transform: translateY(0); }
+          84%  { transform: translateY(20px); }
+          89%  { transform: translateY(-8px); }
+          93%  { transform: translateY(3px); }
+          100% { transform: translateY(0); opacity: 1; }
+        }
+        .vod-sheet-enter { animation: vod-sheet-enter 6.6s ease-in-out 1 both; }
       `}</style>
 
       {/* 상단 사진 — sticky: main 스크롤 시 top-0에 고정 */}
       <div className="sticky top-0 h-[58dvh] min-h-[28rem] overflow-hidden">
         <img
-          src="/slots/vod-main1.jpg"
+          src="/slots/vod-mainmain.jpg"
           alt="VOD 강의 메인"
           className="h-full w-full object-cover object-top"
           decoding="async"
@@ -43,14 +74,14 @@ export default function VodScreen() {
       </div>
 
       {/* 흰 시트 — z-10으로 사진 위에 올라오며 스크롤됨 */}
-      <div className="relative z-10 -mt-6 min-h-[calc(100dvh-10rem)] rounded-t-[3rem] bg-[#f7f9fb] px-6 pb-10 pt-14">
+      <div className="vod-sheet-enter relative z-10 -mt-6 min-h-[calc(100dvh-10rem)] rounded-t-[3rem] bg-[#f7f9fb] px-6 pb-10 pt-14">
 
         {/* 스크롤 안내 */}
-        <div className="mb-6 flex flex-col items-center gap-1">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-500" aria-hidden>
+        <div className="neon-scroll-hint mb-6 flex flex-col items-center gap-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
             <polyline points="18 15 12 9 6 15" />
           </svg>
-          <span className="text-xs tracking-wide text-neutral-500">위로 스크롤 하세요</span>
+          <span className="text-xs font-semibold tracking-wide">위로 스크롤 하세요</span>
         </div>
 
         {/* 시트 헤더 */}

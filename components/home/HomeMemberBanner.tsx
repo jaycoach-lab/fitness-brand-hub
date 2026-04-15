@@ -2,8 +2,12 @@
 
 export default function HomeMemberBanner() {
   return (
-    <section
-      className="relative overflow-hidden rounded-2xl px-4 py-4 shadow-[0_10px_30px_-12px_rgba(11,16,32,0.55),0_0_24px_-12px_rgba(223,255,0,0.35)]"
+    <a
+      href="https://www.latpeed.com/products/BAeXu"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="1인 기업 전략 상담 신청하기"
+      className="relative block overflow-hidden rounded-2xl px-4 py-4 shadow-[0_10px_30px_-12px_rgba(11,16,32,0.55),0_0_24px_-12px_rgba(223,255,0,0.35)] transition-transform duration-200 active:scale-[0.99]"
       style={{
         background:
           "linear-gradient(135deg, #0B1020 0%, #173A8C 48%, #2E5BFF 100%)",
@@ -38,16 +42,13 @@ export default function HomeMemberBanner() {
             300명 이상의 트레이너, 필라테스 강사님의 삶이 달라졌습니다
           </p>
         </div>
-        <a
-          href="https://www.latpeed.com/products/KVW93"
-          target="_blank"
-          rel="noopener noreferrer"
+        <span
           className="shrink-0 rounded-full bg-[#DFFF00] px-3 py-2 text-xs font-extrabold text-[#111111] shadow-[0_4px_14px_rgba(223,255,0,0.35)]"
         >
           신청하기
-        </a>
+        </span>
       </div>
-    </section>
+    </a>
   );
 }
 
