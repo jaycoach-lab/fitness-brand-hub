@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 
-type TabKey = "home" | "library" | "workshop" | "vod" | "reviews";
+type TabKey = "home" | "library" | "vod";
 
 type BottomTabBarProps = {
   activeTab: TabKey;
@@ -46,10 +46,9 @@ function IconPlay() {
 }
 
 const tabs: { key: TabKey; label: string; icon: ReactNode }[] = [
-  { key: "home",     label: "홈",       icon: <IconHome /> },
-  { key: "library",  label: "자료실",   icon: <IconBook /> },
-  { key: "workshop", label: "워크샵",   icon: <IconUsers /> },
-  { key: "vod",      label: "VOD 강의", icon: <IconPlay /> },
+  { key: "home",    label: "홈",       icon: <IconHome /> },
+  { key: "library", label: "자료실",   icon: <IconBook /> },
+  { key: "vod",     label: "VOD 강의", icon: <IconPlay /> },
 ];
 
 export default function BottomTabBar({

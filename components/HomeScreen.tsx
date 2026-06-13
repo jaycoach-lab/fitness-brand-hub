@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import TopBar from "./TopBar";
 import BottomTabBar from "./BottomTabBar";
 import LibraryScreen from "./LibraryScreen";
-import WorkshopScreen from "./WorkshopScreen";
 import HomeMemberBanner from "./home/HomeMemberBanner";
 import HomeContentAICallout from "./home/HomeContentAICallout";
 import HomeWorkshopReviewsMarquee from "./home/HomeWorkshopReviewsMarquee";
@@ -16,7 +15,7 @@ import ReviewsScreen from "./ReviewsScreen";
 import HomeCourseReviews from "./home/HomeCourseReviews";
 import VodScreen from "./VodScreen";
 
-type TabKey = "home" | "library" | "workshop" | "vod" | "reviews";
+type TabKey = "home" | "library" | "vod";
 
 const courseReviewItems = [
   { title: "정규과정 수강 후기", subtitle: "브랜드 방향이 훨씬 또렷해졌어요" },
@@ -116,13 +115,13 @@ export default function HomeScreen() {
 
               <HomeQuickMenu
                 onGoLibrary={() => setActiveTab("library")}
-                onGoWorkshop={() => setActiveTab("workshop")}
+                onGoWorkshop={() => {}}
                 onGoReviews={() => setActiveTab("vod")}
               />
 
               <HomeMemberBanner />
 
-              <HomeLatestWorkshopCard onGoWorkshop={() => setActiveTab("workshop")} />
+              <HomeLatestWorkshopCard onGoWorkshop={() => {}} />
 
               <HomeWorkshopReviewsMarquee />
 
@@ -137,14 +136,12 @@ export default function HomeScreen() {
               </section>
             </div>
           ) : activeTab === "library" ? (
-          <LibraryScreen />
-        ) : activeTab === "workshop" ? (
-          <WorkshopScreen />
-        ) : activeTab === "vod" ? (
-          <VodScreen />
-        ) : (
-          <ReviewsScreen items={courseReviewItems} />
-        )}
+            <LibraryScreen />
+          ) : activeTab === "vod" ? (
+            <VodScreen />
+          ) : (
+            <ReviewsScreen items={courseReviewItems} />
+          )}
         </main>
 
         <BottomTabBar activeTab={activeTab} onSelectTab={setActiveTab} />
