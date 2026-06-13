@@ -52,7 +52,7 @@ export default function LibraryScreen() {
 
       <div className="mt-4 space-y-3">
         <a
-          href="https://www.geekus.kr/fitnessbusinessschool/classroom/185"
+          href="https://drive.google.com/file/d/1iTjlo-I_OozIXffBtLcLpXVI0gwufeJh/view"
           target="_blank"
           rel="noopener noreferrer"
           className="block"
