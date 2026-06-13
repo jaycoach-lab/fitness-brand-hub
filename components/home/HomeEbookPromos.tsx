@@ -19,13 +19,14 @@ export default function HomeEbookPromos({ onGoLibrary }: HomeEbookPromosProps) {
             <p className="text-sm leading-6 text-neutral-500">1인 기업가로 성장하는 실전 전략</p>
           </div>
           <div className="mt-5 flex justify-center">
-            <button
-              type="button"
-              onClick={onGoLibrary}
+            <a
+              href="https://drive.google.com/file/d/1iTjlo-I_OozIXffBtLcLpXVI0gwufeJh/view"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-neutral-900 px-5 text-sm font-semibold text-white"
             >
               무료로 읽기
-            </button>
+            </a>
           </div>
           <div className="relative mt-6 w-full overflow-hidden rounded-2xl">
             <Image
