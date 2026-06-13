@@ -49,10 +49,10 @@ export default function HomeLatestWorkshopCard({
             <h4 className="text-[1.56rem] font-bold leading-snug sm:text-[1.68rem]">
               피트니스 전문가를 위한
               <br />
-              프라이싱과 세일즈설계
+              1인 기업 워크샵
             </h4>
             <p className="mt-1 pl-0.5 text-xs text-white/80">
-              일시 : 2026.04.29 (일) | 서울 구로구 근처
+              일시 : 2026.06.28 (토) 오후 2시 | 온라인 줌 워크샵
             </p>
           </div>
         </div>
