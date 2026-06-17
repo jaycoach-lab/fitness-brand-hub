@@ -115,13 +115,13 @@ export default function HomeScreen() {
 
               <HomeQuickMenu
                 onGoLibrary={() => setActiveTab("library")}
-                onGoWorkshop={() => {}}
+                onGoWorkshop={() => { window.open("https://www.latpeed.com/products/muVdX", "_blank"); }}
                 onGoReviews={() => setActiveTab("vod")}
               />
 
               <HomeMemberBanner />
 
-              <HomeLatestWorkshopCard onGoWorkshop={() => {}} />
+              <HomeLatestWorkshopCard onGoWorkshop={() => { window.open("https://www.latpeed.com/products/muVdX", "_blank"); }} />
 
               <HomeWorkshopReviewsMarquee />
 
