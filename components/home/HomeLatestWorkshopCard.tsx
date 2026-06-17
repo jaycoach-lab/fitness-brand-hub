@@ -23,7 +23,7 @@ export default function HomeLatestWorkshopCard({
       </div>
 
       <a
-        href="https://www.latpeed.com/products/ewBrO"
+        href="https://www.latpeed.com/products/muVdX"
         target="_blank"
         rel="noopener noreferrer"
         className="relative mt-3 flex min-h-[12rem] flex-col overflow-hidden rounded-2xl bg-neutral-900 px-5 py-5 text-white sm:px-6 sm:py-6"
